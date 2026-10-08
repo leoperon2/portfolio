@@ -450,6 +450,15 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 /* vídeo vertical: o quadro assume o formato 9:16 */
 .video.vert{ aspect-ratio:9/16; width:min(100%,24rem,calc(78dvh*9/16)); margin-inline:auto; }
 .video.vert img{ object-fit:cover; }
+
+/* celular: textos de segundo peso (descrições em cor secundária) um pouco menores, sem ficar abaixo de 16px */
+@media (max-width:640px){
+  .intro-text{ font-size:1.125rem; line-height:1.4; }
+  .more-sub,.lead,.info .sm,.dlg .lede,.evhint,.contact-sec .info2,.contact-sec .lead{ font-size:1.0625rem; line-height:1.4; }
+  .facts2 li,.creds li,.pillars span,.svc li p,.ev .evmeta{ font-size:1.0625rem; line-height:1.4; }
+  .dlg-head .meta,.dlg .meta,.facts dt{ font-size:.9375rem; }
+  footer.site{ font-size:.9375rem; }
+}
 </style>
 </head>
 <body>
