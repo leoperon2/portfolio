@@ -446,6 +446,10 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
   .themebtn svg{ width:1.45rem; height:1.02rem; }
 }
 @media (max-width:380px){ .top nav.lang a{ min-width:30px; } }
+
+/* vídeo vertical: o quadro assume o formato 9:16 */
+.video.vert{ aspect-ratio:9/16; width:min(100%,24rem,calc(78dvh*9/16)); margin-inline:auto; }
+.video.vert img{ object-fit:cover; }
 </style>
 </head>
 <body>
@@ -760,7 +764,7 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
    <h2 id="t-elo28">ELO28</h2>
    <p class="lede">Naming, launch, opening and teaser films for Bilfor's arrival in neighborhood 28.</p>
   </header>
-  <div class="vgroup"><div class="video" data-poster><img src="https://i.ytimg.com/vi/6ISV1Wmg6Gs/maxresdefault.jpg" width="1280" height="720" alt="Naming film, ELO28" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='../img/elo28/video.jpg'"><button class="play" type="button" data-vimeo="yt:6ISV1Wmg6Gs" data-h="" aria-label="Play video: Naming film"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="rgba(0,0,0,.55)" stroke="#fff" stroke-width="2"/><path d="M26 20l20 12-20 12z" fill="#fff"/></svg></button></div><ul class='vlist' aria-label='Videos'><li><button type="button" data-pick="yt:6ISV1Wmg6Gs" data-h="" aria-pressed="true">Naming film</button></li><li><button type="button" data-pick="yt:6V3ZcKI1nj0" data-h="" aria-pressed="false">Launch film</button></li><li><button type="button" data-pick="yt:IICRZyBiVjA" data-h="" aria-pressed="false">Bilfor opening film</button></li><li><button type="button" data-pick="yt:H4UCT3wArUE" data-h="" aria-pressed="false">Teaser</button></li></ul></div>
+  <div class="vgroup"><div class="video" data-poster><img src="https://i.ytimg.com/vi/6ISV1Wmg6Gs/maxresdefault.jpg" width="1280" height="720" alt="Naming film, ELO28" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='../img/elo28/video.jpg'"><button class="play" type="button" data-vimeo="yt:6ISV1Wmg6Gs" data-h="" aria-label="Play video: Naming film"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="rgba(0,0,0,.55)" stroke="#fff" stroke-width="2"/><path d="M26 20l20 12-20 12z" fill="#fff"/></svg></button></div><ul class='vlist' aria-label='Videos'><li><button type="button" data-pick="yt:6ISV1Wmg6Gs" data-h="" aria-pressed="true">Naming film</button></li><li><button type="button" data-pick="yt:6V3ZcKI1nj0" data-h="" aria-pressed="false">Launch film</button></li><li><button type="button" data-pick="yt:IICRZyBiVjA" data-h="" aria-pressed="false">Bilfor opening film</button></li><li><button type="button" data-pick="yt:H4UCT3wArUE" data-vert="1" data-h="" aria-pressed="false">Teaser</button></li></ul></div>
   <dl class="facts brief"><div><dt>Context and challenge</dt><dd><p>Bilfor arrived with ELO28's lifestyle in hand and a request that seemed simple: turn that identity into a story. Not just any story, but the story of a development arriving in the neighborhood and the city, with the same excellence with which Bilfor builds its own trajectory. The mission: to make the city fall in love with a new address.</p></dd></div><div><dt>My role</dt><dd><p>Script, editing and AI image generation.</p></dd></div><div><dt>Idea and solution</dt><dd><p>“Close to you”: the name and the films place the brand in the neighborhood's daily life. The most special part: an entire song just for ELO28, lyrics and melody, in a rhythm tailor-made for the concept and the style.</p></dd></div><div><dt>Main deliverables</dt><dd><p>I wrote the scripts, edited the four films and generated part of the images with AI. The films: naming, launch, Bilfor opening and teaser (“Bilfor is arriving in neighborhood 28”).</p></dd></div><div><dt>Result</dt><dd><p>It was a success. Many units sold right at launch, and a project that enchanted and made history.</p></dd></div><div><dt>Credits</dt><dd><p>Client: Bilfor. Image capture: London Creative.</p></dd></div></dl><details class="story"><summary>Behind-the-scenes stories</summary><p class="evtext">Afterwards, it was beautiful to see people humming the chorus around. When a brand becomes a song stuck in your head, it already lives inside people. ELO. Connection. 🎵🎶🎤</p></details>
   <div class="gallery"><figure><img src="../img/elo28/1.jpg" width="1600" height="1000" alt="Couple inside the car, with the phrase “Close to you”" loading="lazy" decoding="async"></figure><figure><img src="../img/elo28/2.jpg" width="1600" height="1000" alt="Man smiling while looking at his phone, outdoors" loading="lazy" decoding="async"></figure><figure><img src="../img/elo28/3.jpg" width="1600" height="1000" alt="Image from the teaser “Bilfor is arriving in neighborhood 28”, with the ELO28 logo" loading="lazy" decoding="async"></figure></div>
   <footer class="dlg-cta"><p>Want something like this for your brand or event?</p><a class="btn" href="#contato" data-close>Tell me about your project</a></footer>
@@ -785,6 +789,8 @@ var G=["data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsHCAoIBwsKCQoMD
     if(d&&vid){ var p=d.querySelector('[data-pick="'+vid+'"]'); if(p) p.click(); }
   }); });
   function embed(box,id,h){
+    var g=box.closest('.vgroup'), vt=g&&g.querySelector('[data-vert][data-pick="'+id+'"],[data-vert][data-vimeo="'+id+'"]');
+    box.classList.toggle('vert',!!vt); if(vt&&box.scrollIntoView) box.scrollIntoView({block:'nearest',behavior:'smooth'});
     var f=document.createElement('iframe');
     var yt=id.indexOf('yt:')===0;
     f.src=yt?'https://www.youtube-nocookie.com/embed/'+id.slice(3)+'?autoplay=1&rel=0&playsinline=1':'https://player.vimeo.com/video/'+id+'?'+(h?'h='+h+'&':'')+'autoplay=1&dnt=1';
@@ -797,7 +803,7 @@ var G=["data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsHCAoIBwsKCQoMD
   function reset(d){
     d.querySelectorAll('.video iframe').forEach(function(f){
       var box=f.parentNode, id=f.getAttribute('data-vid'), h=f.getAttribute('data-h')||'';
-      f.remove(); box.classList.remove('on');
+      f.remove(); box.classList.remove('on'); box.classList.remove('vert');
       var b=document.createElement('button'); b.className='play'; b.type='button'; b.setAttribute('data-vimeo',id); b.setAttribute('data-h',h); b.setAttribute('aria-label','Play video');
       b.innerHTML='<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="rgba(0,0,0,.55)" stroke="#fff" stroke-width="2"/><path d="M26 20l20 12-20 12z" fill="#fff"/></svg>';
       box.appendChild(b); b.addEventListener('click',function(){ embed(box,id,h); });
