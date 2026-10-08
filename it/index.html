@@ -88,6 +88,8 @@ mark.fill{ background:var(--fill); color:#111; padding:.02em .28em; border-radiu
 .lang a[aria-current="true"] svg{ outline:2px solid var(--ink); outline-offset:3px; }
 .lang svg{ width:28px; height:20px; display:block; border-radius:2px; box-shadow:0 0 0 1px rgba(128,128,128,.45); }
 @media (max-width:640px){ .top .wrap{ flex-wrap:wrap; row-gap:0; } .brand{ order:1; } .lang{ order:2; margin-left:auto; } .top nav{ order:3; flex-basis:100%; gap:1.4rem; } .top nav a{ min-height:40px; } }
+@media (max-width:640px){ .top nav.lang{ order:2; flex-basis:auto; margin-left:auto; gap:0; } .top nav.lang a{ min-width:38px; } .intro-name,.intro-sig{ display:none; } }
+@media (max-width:380px){ .top nav.lang a{ min-width:32px; } .lang svg{ width:24px; height:17px; } .top .brand{ font-size:1.45rem; } }
 @media (max-width:759px){ .top nav{ gap:1.1rem; } }
 
 /* prova */
