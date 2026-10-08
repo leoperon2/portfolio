@@ -237,8 +237,10 @@ dialog[open]{ animation:fade .2s ease-out; }
 .evtext{ margin:.8rem 0 0; max-width:38em; }
 .evg{ display:grid; gap:8px; grid-template-columns:1fr 1fr; }
 @media (min-width:760px){ .evg{ grid-template-columns:repeat(3,1fr); } .evm{ grid-template-columns:repeat(3,1fr); } }
-.evg figure{ margin:0; background:var(--soft); }
-.evg img{ width:100%; aspect-ratio:4/3; object-fit:contain; background:var(--soft); display:block; }
+.evg figure{ margin:0; background:var(--soft); overflow:hidden; }
+.evg img{ width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center; background:var(--soft); display:block; transition:transform .5s cubic-bezier(.2,.7,.2,1); }
+@media (hover:hover){ .evg figure:hover img{ transform:scale(1.07); } }
+@media (prefers-reduced-motion:reduce){ .evg img{ transition:none; } .evg figure:hover img{ transform:none; } }
 .evg figcaption{ font-size:.75rem; color:var(--ink2); padding:.35rem .5rem .5rem; }
 .evm img{ object-fit:cover; }
 .facts{ margin:1.6rem 0 0; border-top:1px solid var(--line); }
