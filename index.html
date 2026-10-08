@@ -384,6 +384,38 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 .story .evtext{ margin:.9rem 0 1rem; }
 .story .evtext + .evtext{ margin-top:0; }
 @media (prefers-reduced-motion:reduce){ .evtog::before,.evtog::after{ transition:none; } }
+
+/* celular: uma só família (Antonio), hierarquia por peso e por tom de branco */
+@media (max-width:640px){
+  :root{ --sans:"Antonio","Oswald","Arial Narrow",Arial,sans-serif; }
+  body{ font-weight:300; font-size:1.1875rem; line-height:1.45; letter-spacing:.012em; }
+  strong,b{ font-weight:600; }
+  .top nav{ font-size:1.125rem; font-weight:400; letter-spacing:.03em; }
+  .intro-text{ font-size:1.25rem; line-height:1.4; font-weight:300; }
+  .more-sub,.lead,.info .sm,.dlg .lede,.evhint{ font-size:1.1875rem; font-weight:300; }
+  .wmeta{ font-size:1rem; letter-spacing:.03em; font-weight:400; }
+  .cap .wtitle{ font-weight:500; }
+  .info .big{ font-weight:400; }
+  .facts2 li,.creds li,.pillars span,.svc li p{ font-size:1.125rem; font-weight:300; }
+  .facts2 strong,.pillars strong{ font-weight:500; letter-spacing:.03em; }
+  .pillars strong{ font-weight:300; }
+  .dlg-head .meta,.dlg .meta{ font-size:1rem; font-weight:400; letter-spacing:.06em; text-transform:uppercase; }
+  .facts dt{ font-size:1rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--ink2); }
+  .facts dd,.facts dd p,.dlg section p,.evtext,.hl li{ font-size:1.1875rem; font-weight:300; color:var(--ink); }
+  .brief .tag{ font-weight:600; }
+  .evsub,.evmeta,.evtop-t{ font-size:.9375rem; font-weight:500; letter-spacing:.08em; }
+  .evnav button{ font-size:1.0625rem; font-weight:500; }
+  .evnav button span{ font-size:.9375rem; font-weight:300; }
+  .pal h4,.ev h4{ font-size:.9375rem; font-weight:500; letter-spacing:.08em; }
+  .more-grid span,.evg figcaption{ font-size:1.0625rem; font-weight:400; }
+  .btn,.close,.vlist button,.story summary,.tlink{ font-size:1.125rem; font-weight:500; letter-spacing:.04em; }
+  .vlist button{ font-weight:400; }
+  .vlink,.sw span,.sw code,.sw b{ font-size:1rem; }
+  .contact-sec .info2,.contact-sec .lead{ font-size:1.1875rem; font-weight:300; }
+  footer.site{ font-size:1rem; font-weight:300; }
+  blockquote footer{ font-size:1.125rem; }
+  .tile.captop .wmeta{ display:none; }
+}
 </style>
 </head>
 <body>
