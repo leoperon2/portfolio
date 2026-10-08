@@ -5,12 +5,12 @@ Site estático publicado no GitHub Pages: https://leoperon2.github.io/portfolio/
 ## Estrutura (idiomas)
 | Idioma | Endereço | Arquivo |
 |---|---|---|
-| English (principal) | `/portfolio/` | `index.html` |
-| Português | `/portfolio/pt/` | `pt/index.html` |
+| Português (principal) | `/portfolio/` | `index.html` |
+| English | `/portfolio/en/` | `en/index.html` |
 | Español | `/portfolio/es/` | `es/index.html` |
 | Italiano | `/portfolio/it/` | `it/index.html` |
 
-Ordem das bandeiras: EN, PT, ES, IT. `/en/` só redireciona para a raiz.
+Ordem das bandeiras: PT, EN, ES, IT. `/pt/` só redireciona para a raiz.
 Imagens e vídeos ficam em `img/`; as páginas dentro de subpastas usam `../img/...`.
 
 ## Fonte da verdade
