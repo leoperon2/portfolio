@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("nav.lang a");if(!a)return;var h=a.getAttribute("hreflang")||"";try{localStorage.setItem("lang",h==="pt-BR"?"pt":h)}catch(x){}});</script>
 <style>
 :root{
   box-sizing:border-box;

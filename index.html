@@ -30,6 +30,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>(function(){try{var s=localStorage.getItem("lang");var l=s;if(!l){var L=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"pt"];var ok={pt:1,en:1,es:1,it:1};for(var i=0;i<L.length;i++){var p=String(L[i]).toLowerCase().split("-")[0];if(ok[p]){l=p;break}}if(!l)l="en"}if(l==="en"||l==="es"||l==="it"){location.replace(l+"/"+location.search+location.hash)}}catch(e){}})();</script>
+<script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("nav.lang a");if(!a)return;var h=a.getAttribute("hreflang")||"";try{localStorage.setItem("lang",h==="pt-BR"?"pt":h)}catch(x){}});</script>
 <style>
 :root{
   box-sizing:border-box;
