@@ -24,5 +24,6 @@ Peça as mudanças ao Claude (edita, publica no `main` e mantém os 4 idiomas ig
 Para voltar uma versão: histórico de commits no GitHub.
 
 ## Lançamento
-`robots.txt` bloqueia buscadores enquanto o site é rascunho. No lançamento, trocar por
-`User-agent: *` + `Allow: /` e remover qualquer `<meta name="robots" content="noindex">`.
+Site no ar e liberado para buscadores: `robots.txt` com `Allow: /` e `sitemap.xml` na raiz,
+sem `noindex` nas páginas, com JSON-LD `Person` em cada idioma. Próximo passo: cadastrar o site
+no Google Search Console e enviar `https://leoperon2.github.io/portfolio/sitemap.xml`.
