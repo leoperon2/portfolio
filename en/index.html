@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>try{if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("js");}catch(e){}</script>
 <script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("nav.lang a");if(!a)return;var h=a.getAttribute("hreflang")||"";try{localStorage.setItem("lang",h==="pt-BR"?"pt":h)}catch(x){}});</script>
 <style>
 :root{
@@ -464,6 +465,19 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 /* margens laterais menores */
 .wrap{ width:min(1200px,100% - clamp(2rem,5vw,3rem)); }
 .dlg{ padding-left:clamp(1rem,3.5vw,2.5rem); padding-right:clamp(1rem,3.5vw,2.5rem); }
+
+/* Animações de scroll (desativadas se o visitante pedir "reduzir movimento") */
+#prog{position:fixed;top:0;left:0;right:0;height:2px;background:var(--ink);transform-origin:0 50%;transform:scaleX(0);z-index:60;pointer-events:none}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes zoomIn{from{transform:scale(1.14)}to{transform:scale(1)}}
+.js .intro .wrap>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.js .intro .wrap>*:nth-child(2){animation-delay:.12s}
+.js .intro .wrap>*:nth-child(3){animation-delay:.24s}
+.js .intro .wrap>*:nth-child(4){animation-delay:.36s}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .tile.in img{animation:zoomIn 1.4s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:var(--d,0s)}
+@media (prefers-reduced-motion:reduce){#prog{display:none}}
 </style>
 </head>
 <body>
@@ -867,6 +881,21 @@ function cur(){var t=r.getAttribute('data-theme');if(t)return t;return(window.ma
 function sync(){b.setAttribute('aria-pressed',cur()==='dark'?'true':'false');}
 sync();
 b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}sync();});
+})();
+</script>
+<script>
+(function(){
+var r=document.documentElement;if(!r.classList.contains('js'))return;
+var sel=['.tile','.info h2','.info .big','.facts2 li','.pillars li','.more h2','.more-sub','.more-grid li','.more-actions','.contact-sec h2','.contact-sec .lead','.contact-sec .row','.alts li','.info2'];
+var els=[];
+sel.forEach(function(s){var n=document.querySelectorAll(s);for(var i=0;i<n.length;i++){var e=n[i];if(e.classList.contains('rv'))continue;e.classList.add('rv');e.style.setProperty('--d',((i%3)*0.09)+'s');els.push(e);}});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){io.observe(e);});
+var p=document.createElement('div');p.id='prog';p.setAttribute('aria-hidden','true');document.body.appendChild(p);
+var t=false;
+function u(){t=false;var h=r.scrollHeight-innerHeight;p.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')';}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u);}},{passive:true});
+addEventListener('resize',u);u();
 })();
 </script>
 </body>
