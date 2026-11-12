@@ -492,14 +492,14 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 .js .tile.in img{animation:zoomIn 1.4s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:var(--d,0s)}
 @media (prefers-reduced-motion:reduce){#prog{display:none}}
 
-/* 2026-11-12: editorial first fold, intentional line breaks */
-.intro{min-height:calc(100svh - 110px);display:flex;align-items:center;padding:clamp(52px,8vh,100px) 0 clamp(55px,8vh,100px)}
-.intro>.wrap{width:100%;max-width:1320px;gap:clamp(22px,3vh,38px);padding-inline:clamp(24px,5.5vw,100px)}
-.intro h1{font-size:clamp(4rem,9vw,9.5rem);line-height:.94;letter-spacing:-.065em;font-weight:500;max-width:none;text-wrap:initial}
+/* 2026-11-12: enlarged editorial hero, aligned text measure */
+.intro{min-height:calc(100svh - 110px);display:flex;align-items:center;padding:clamp(54px,7vh,100px) 0 clamp(60px,8vh,105px)}
+.intro>.wrap{width:100%;max-width:1480px;gap:clamp(24px,3vh,38px);padding-inline:clamp(24px,5vw,95px)}
+.intro h1{font-size:clamp(5rem,11.6vw,12.3rem);line-height:.9;letter-spacing:-.075em;font-weight:500;max-width:none;text-wrap:initial}
 .intro h1 .hero-line{display:block;white-space:nowrap}
-.intro-text{max-width:780px;font-size:clamp(1.25rem,2.1vw,2rem);line-height:1.42}
-.intro-sig{font-size:clamp(1.5rem,2.8vw,2.6rem);line-height:1.22;margin-top:clamp(10px,2vh,25px);max-width:650px}
-@media(max-width:700px){.intro{min-height:calc(100svh - 115px);padding:42px 0 54px}.intro>.wrap{gap:clamp(17px,2.5vh,28px);padding-inline:clamp(24px,6vw,36px)}.intro h1{font-size:clamp(3.4rem,12.5vw,6rem);line-height:.96}.intro-text{font-size:clamp(1.1rem,4.2vw,1.4rem);line-height:1.48}.intro-sig{font-size:clamp(1.35rem,5vw,1.9rem);line-height:1.25}}
+.intro-text{max-width:clamp(440px,46vw,720px);font-size:clamp(1.5rem,2.6vw,2.55rem);line-height:1.36;text-wrap:pretty}
+.intro-sig{font-size:clamp(1.65rem,3.2vw,3rem);line-height:1.2;margin-top:clamp(8px,1.8vh,22px);max-width:clamp(440px,46vw,720px);text-wrap:balance}
+@media(max-width:700px){.intro{min-height:calc(100svh - 105px);padding:45px 0 55px}.intro>.wrap{gap:clamp(20px,2.8vh,30px);padding-inline:clamp(20px,5.5vw,34px)}.intro h1{font-size:clamp(3.6rem,14.1vw,6.2rem);letter-spacing:-.083em;line-height:.94}.intro-text{max-width:100%;font-size:clamp(1.28rem,5.15vw,1.65rem);line-height:1.43}.intro-sig{max-width:100%;font-size:clamp(1.5rem,5.5vw,2rem);line-height:1.24}}
 </style>
 </head>
 <body>
