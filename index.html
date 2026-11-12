@@ -491,6 +491,14 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 .js .rv.in{opacity:1;transform:none}
 .js .tile.in img{animation:zoomIn 1.4s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:var(--d,0s)}
 @media (prefers-reduced-motion:reduce){#prog{display:none}}
+
+/* 2026-11-12: spacious first fold, portfolio mosaic peeks below viewport */
+.intro{min-height:calc(100svh - 150px);display:flex;align-items:center;padding:clamp(70px,10vh,150px) 0 clamp(65px,9vh,125px)}
+.intro>.wrap{width:100%;max-width:1180px;gap:clamp(18px,2.8vh,32px)}
+.intro h1{font-size:clamp(3rem,7.2vw,6.6rem);line-height:1.02;letter-spacing:-.055em;max-width:1000px}
+.intro-text{max-width:670px;line-height:1.65}
+.intro-sig{margin-top:clamp(10px,2vh,22px)}
+@media(max-width:700px){.intro{min-height:calc(100svh - 150px);padding:55px 0 65px}.intro>.wrap{gap:20px}.intro h1{font-size:clamp(2.9rem,11vw,5rem);line-height:1.04}.intro-text{font-size:1.06rem;line-height:1.65}}
 </style>
 </head>
 <body>
