@@ -492,13 +492,14 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 .js .tile.in img{animation:zoomIn 1.4s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:var(--d,0s)}
 @media (prefers-reduced-motion:reduce){#prog{display:none}}
 
-/* 2026-11-12: spacious first fold, portfolio mosaic peeks below viewport */
-.intro{min-height:calc(100svh - 150px);display:flex;align-items:center;padding:clamp(70px,10vh,150px) 0 clamp(65px,9vh,125px)}
-.intro>.wrap{width:100%;max-width:1180px;gap:clamp(18px,2.8vh,32px)}
-.intro h1{font-size:clamp(3rem,7.2vw,6.6rem);line-height:1.02;letter-spacing:-.055em;max-width:1000px}
-.intro-text{max-width:670px;line-height:1.65}
-.intro-sig{margin-top:clamp(10px,2vh,22px)}
-@media(max-width:700px){.intro{min-height:calc(100svh - 150px);padding:55px 0 65px}.intro>.wrap{gap:20px}.intro h1{font-size:clamp(2.9rem,11vw,5rem);line-height:1.04}.intro-text{font-size:1.06rem;line-height:1.65}}
+/* 2026-11-12: editorial first fold, intentional line breaks */
+.intro{min-height:calc(100svh - 110px);display:flex;align-items:center;padding:clamp(52px,8vh,100px) 0 clamp(55px,8vh,100px)}
+.intro>.wrap{width:100%;max-width:1320px;gap:clamp(22px,3vh,38px);padding-inline:clamp(24px,5.5vw,100px)}
+.intro h1{font-size:clamp(4rem,9vw,9.5rem);line-height:.94;letter-spacing:-.065em;font-weight:500;max-width:none;text-wrap:initial}
+.intro h1 .hero-line{display:block;white-space:nowrap}
+.intro-text{max-width:780px;font-size:clamp(1.25rem,2.1vw,2rem);line-height:1.42}
+.intro-sig{font-size:clamp(1.5rem,2.8vw,2.6rem);line-height:1.22;margin-top:clamp(10px,2vh,25px);max-width:650px}
+@media(max-width:700px){.intro{min-height:calc(100svh - 115px);padding:42px 0 54px}.intro>.wrap{gap:clamp(17px,2.5vh,28px);padding-inline:clamp(24px,6vw,36px)}.intro h1{font-size:clamp(3.4rem,12.5vw,6rem);line-height:.96}.intro-text{font-size:clamp(1.1rem,4.2vw,1.4rem);line-height:1.48}.intro-sig{font-size:clamp(1.35rem,5vw,1.9rem);line-height:1.25}}
 </style>
 </head>
 <body>
@@ -521,7 +522,7 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 <section class="intro" aria-labelledby="intro-t">
   <div class="wrap">
     <p class="intro-name">Leopoldo Peron</p>
-    <h1 id="intro-t">Direção de arte, marcas e movimento.</h1>
+    <h1 id="intro-t"><span class="hero-line">Direção</span><span class="hero-line">de arte,</span><span class="hero-line">marcas e</span><span class="hero-line">movimento.</span></h1>
     <p class="intro-text">Mais de 20 anos de trajetória criativa, desenvolvendo marcas, campanhas e experiências audiovisuais para clientes nacionais e internacionais.</p>
     <p class="intro-sig">Ideias que vendem. Marcas memoráveis.</p>
   </div>
