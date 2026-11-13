@@ -92,3 +92,17 @@ dialog{width:min(1240px,100%);background:#eeefe9;color:#101413}
 main>.intro + .wrap{position:relative;z-index:2;margin-top:clamp(-86px,-7vw,-46px)}
 main>.intro + .wrap>.mosaic{position:relative;z-index:2}
 @media(max-width:759px){main>.intro + .wrap{margin-top:-68px}}
+
+/* Final art direction: unmistakable black masthead, charcoal transition,
+   and a clean paper canvas beneath the overlapping first project. */
+.top{background:#101413!important;border-bottom-color:#333b36!important}
+.intro{background:#101413!important;color:#f3f5ef!important;padding-bottom:clamp(118px,14vw,205px)}
+main>.intro + .wrap{isolation:isolate}
+main>.intro + .wrap::before{content:"";position:absolute;z-index:-1;left:50%;transform:translateX(-50%);top:clamp(46px,7vw,86px);width:100vw;height:clamp(65px,9vw,125px);background:#414a44;pointer-events:none}
+main>.intro + .wrap>.mosaic{position:relative}
+main>.intro + .wrap>.mosaic>.tile:first-child{box-shadow:0 20px 45px rgba(0,0,0,.17)}
+@media(max-width:759px){
+ .intro{padding-bottom:125px}
+ main>.intro + .wrap{margin-top:-72px}
+ main>.intro + .wrap::before{top:44px;height:78px}
+}
