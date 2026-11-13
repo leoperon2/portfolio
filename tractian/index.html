@@ -16,6 +16,10 @@
 .video-grid .video-label + *{margin-top:0}
 .visual figcaption{padding-top:9px;padding-bottom:18px;line-height:1.35}
 @media(max-width:750px){.video-grid{row-gap:32px}.more-work[open]{padding-bottom:32px}}
+/* Remove dead space between an expanded gallery and the next case divider. */
+.case:has(> .more-work[open]){padding-bottom:0}
+.case:has(> .more-work[open]) + .case{border-top:1px solid #b5bdb4}
+.case:has(> .more-work[open]) > .more-work[open]{margin-bottom:0}
 </style></head><body>
 <nav><a href="../en/" aria-label="Portfolio home"><strong>LEOPOLDO PERON®</strong></a><div class="links"><a href="#work">WORK</a><a href="../en/">FULL PORTFOLIO</a><a href="mailto:leoperon@gmail.com">CONTACT</a></div></nav>
 <main><section class="hero"><div class="kicker">SENIOR ART DIRECTOR / BRAND DESIGNER</div><h1>Brands that <span>move</span> people.</h1><p>I bring brands to life through art direction, visual storytelling and hands-on creative execution.</p><div class="kicker meta">20+ YEARS IN CREATIVE WORK · BRAZIL · INTERNATIONAL COLLABORATION</div></section>
