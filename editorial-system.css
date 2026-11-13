@@ -87,3 +87,8 @@ dialog{width:min(1240px,100%);background:#eeefe9;color:#101413}
  .intro + .mosaic,.intro ~ .mosaic{margin-top:-68px}
  .mosaic>.tile:first-child{box-shadow:0 12px 28px rgba(16,20,19,.18)}
 }
+
+/* The project mosaic is nested inside .wrap, immediately following .intro. */
+main>.intro + .wrap{position:relative;z-index:2;margin-top:clamp(-86px,-7vw,-46px)}
+main>.intro + .wrap>.mosaic{position:relative;z-index:2}
+@media(max-width:759px){main>.intro + .wrap{margin-top:-68px}}
