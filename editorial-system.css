@@ -53,3 +53,12 @@ dialog{width:min(1240px,100%);background:#eeefe9;color:#101413}
 @media(max-width:759px){.wrap{width:calc(100% - 36px)}.top .wrap{min-height:58px}.top nav{gap:12px}.intro{padding:78px 0 85px}.intro h1{font-size:clamp(50px,12vw,82px)}.mosaic{grid-template-columns:1fr;gap:8px}.mosaic>.tile{aspect-ratio:4/3}.cap{padding:18px}.wtitle{font-size:clamp(26px,7vw,42px)}dialog{height:100dvh;max-height:100dvh}.dlg{padding:24px 18px 56px}.dlg-head h2{font-size:clamp(48px,12vw,76px)}.gallery,.evg{grid-template-columns:1fr 1fr;gap:7px}.gallery.mosaic{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:420px){.top nav{gap:8px}.top nav a{font-size:12px}.top nav.lang a{min-width:34px}.intro h1{font-size:clamp(46px,11.5vw,64px)}}
 @media(prefers-reduced-motion:reduce){.tile img,.gallery img,.evg img{transition:none}}
+
+/* Consistent full-width video selector across every project case. */
+.dlg .vlist{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;margin:10px 0 0;padding:0;width:100%;list-style:none}
+.dlg .vlist li{display:block;min-width:0;width:100%;margin:0}
+.dlg .vlist button{display:flex;align-items:center;justify-content:flex-start;width:100%;min-height:52px;padding:12px 18px;text-align:left;white-space:normal;line-height:1.35;font-size:clamp(13px,1.4vw,15px);font-weight:700;letter-spacing:-.015em;border:1px solid var(--line);background:#e0e5dc;color:#101413;cursor:pointer}
+.dlg .vlist button[aria-pressed="true"]{background:#101413;color:#f3f5ef;border-color:#101413}
+.dlg .vlist button:hover:not([aria-pressed="true"]){background:#c6ff5d;border-color:#101413}
+.dlg .vlist button:focus-visible{outline:2px solid #101413;outline-offset:2px}
+@media(max-width:759px){.dlg .vlist button{min-height:54px;padding:13px 15px;font-size:14px}}
