@@ -126,3 +126,18 @@ dialog[open] .themebtn{z-index:2147483000}
  .top .themebtn{top:8px;right:10px;width:44px;height:44px}
  .top nav{margin-right:50px}
 }
+
+
+/* Case dialogs must stay legible independently of the surrounding page theme. */
+dialog,.dlg{background:var(--bg)!important;color:var(--ink)!important;color-scheme:light}
+:root[data-theme="dark"] dialog,:root[data-theme="dark"] .dlg{color-scheme:dark}
+@media(prefers-color-scheme:dark){
+ :root:not([data-theme="light"]) dialog,:root:not([data-theme="light"]) .dlg{color-scheme:dark}
+}
+.dlg :is(p,li,blockquote,figcaption,small,.lede,.meta,.caption,.muted),
+dialog :is(p,li,blockquote,figcaption,small,.lede,.meta,.caption,.muted){
+ color:var(--ink)!important;opacity:1!important;
+}
+.dlg :is(h1,h2,h3,h4,h5,h6,strong,b),dialog :is(h1,h2,h3,h4,h5,h6,strong,b){color:var(--ink)!important}
+.dlg a:not(.btn),dialog a:not(.btn){color:var(--ink)!important;text-decoration-color:var(--fill)}
+.dlg .vlist button[aria-pressed="true"]{background:var(--ink)!important;color:var(--bg)!important}
