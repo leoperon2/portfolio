@@ -106,3 +106,23 @@ main>.intro + .wrap>.mosaic>.tile:first-child{box-shadow:0 20px 45px rgba(0,0,0,
  main>.intro + .wrap{margin-top:-72px}
  main>.intro + .wrap::before{top:44px;height:78px}
 }
+
+
+/* November 2026 usability pass: persistent theme control and readable project copy. */
+.top .themebtn{
+ position:fixed!important;top:14px;right:clamp(12px,2vw,28px);z-index:2147483000;
+ width:46px;height:46px;min-width:46px;min-height:46px;
+ border:1px solid #69756b;border-radius:50%;background:#101413;
+ color:#f3f5ef;box-shadow:0 4px 18px rgba(0,0,0,.25);
+}
+.top .wrap,.top nav{padding-right:0}
+.top nav{margin-right:54px}
+dialog[open] .themebtn{z-index:2147483000}
+.dlg,.dlg p,.dlg li,.dlg figcaption,.dlg .lede{color:var(--ink)}
+.dlg .meta,.dlg .caption,.dlg figcaption,.dlg .muted{color:var(--ink2)}
+.dlg .vlist{width:100%;grid-template-columns:minmax(0,1fr)}
+.dlg .vlist>li,.dlg .vlist button{width:100%;max-width:none}
+@media(max-width:759px){
+ .top .themebtn{top:8px;right:10px;width:44px;height:44px}
+ .top nav{margin-right:50px}
+}
