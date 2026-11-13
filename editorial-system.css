@@ -62,3 +62,15 @@ dialog{width:min(1240px,100%);background:#eeefe9;color:#101413}
 .dlg .vlist button:hover:not([aria-pressed="true"]){background:#c6ff5d;border-color:#101413}
 .dlg .vlist button:focus-visible{outline:2px solid #101413;outline-offset:2px}
 @media(max-width:759px){.dlg .vlist button{min-height:54px;padding:13px 15px;font-size:14px}}
+
+/* Restore the original light/dark toggle and keep both modes in the new art direction. */
+:root[data-theme="dark"]{--bg:#101413;--soft:#202b24;--ink:#f3f5ef;--ink2:#b8c5b9;--line:#39463d;--fill:#c6ff5d}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101413;--soft:#202b24;--ink:#f3f5ef;--ink2:#b8c5b9;--line:#39463d;--fill:#c6ff5d}}
+:root[data-theme="light"]{--bg:#eeefe9;--soft:#dce7d6;--ink:#101413;--ink2:#47534b;--line:#c9d0c8;--fill:#c6ff5d}
+.top .themebtn{display:inline-flex!important;flex:0 0 44px;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:0;color:#f3f5ef;visibility:visible;opacity:1}
+.top .themebtn svg{display:block;width:30px;height:22px}
+.top .themebtn:focus-visible{outline:2px solid #c6ff5d}
+.dlg .vlist button{background:var(--soft);color:var(--ink);border-color:var(--line)}
+.dlg .vlist button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dlg .vlist button:hover:not([aria-pressed="true"]){background:#c6ff5d;color:#101413;border-color:#101413}
+@media(max-width:640px){.top .themebtn{order:4;flex-basis:44px;align-self:center}.top .wrap{align-items:center}.top nav:not(.lang){min-width:0}}
