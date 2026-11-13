@@ -1,0 +1,55 @@
+/* Editorial visual system — shared by the complete PT/EN portfolio.
+   Keeps existing project content, media, interactions and deep links intact. */
+:root,:root[data-theme="dark"]{
+ --bg:#eeefe9;--soft:#dce7d6;--ink:#101413;--ink2:#47534b;--line:#c9d0c8;--fill:#c6ff5d;
+ --serif:Arial,Helvetica,sans-serif;--sans:Arial,Helvetica,sans-serif;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#eeefe9;--soft:#dce7d6;--ink:#101413;--ink2:#47534b;--line:#c9d0c8;--fill:#c6ff5d}}
+:root[data-theme="light"]{--bg:#eeefe9;--soft:#dce7d6;--ink:#101413;--ink2:#47534b;--line:#c9d0c8;--fill:#c6ff5d}
+html{scroll-padding-top:82px}
+body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;background:var(--bg);color:var(--ink)}
+.wrap{width:min(1440px,100% - clamp(32px,10vw,144px))}
+h1,h2,h3,.brand,.wtitle{font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:-.065em}
+h1,h2{line-height:.95}
+.top{background:#101413;color:#f3f5ef;border-color:#333b36}
+.top .brand,.top nav a{color:#f3f5ef}
+.top nav .btn{background:#c6ff5d;color:#101413;border-color:#c6ff5d}
+.top nav .lang a[aria-current="true"] svg{outline-color:#c6ff5d}
+.intro{background:#101413;color:#f3f5ef;padding:clamp(84px,11vw,165px) 0 clamp(80px,10vw,140px)}
+.intro .wrap{max-width:1440px;gap:clamp(18px,2.4vw,32px)}
+.intro-name{color:#c6ff5d;font-size:12px;font-weight:800;letter-spacing:.17em}
+.intro h1{font-size:clamp(54px,9.8vw,148px);font-weight:800;letter-spacing:-.085em;line-height:.9;max-width:1200px;text-wrap:balance}
+.intro-text{color:#cbd0ca;max-width:750px;font-size:clamp(18px,2.2vw,27px);line-height:1.4}
+.intro-sig{color:#c6ff5d;font-weight:700}
+.intro-links a{color:#f3f5ef}
+.intro-links a:hover{color:#c6ff5d}
+.mosaic{gap:10px;padding-top:0}
+.tile{border-radius:0;aspect-ratio:5/4}
+.tile::after{height:60%;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent)}
+.cap{padding:clamp(16px,2.6vw,34px);gap:7px}
+.wtitle{font-size:clamp(23px,3.5vw,46px);line-height:.98;color:#fff}
+.wmeta{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.info,.quotes-sec,.more,.contact-sec{padding-block:clamp(64px,8vw,118px)}
+.info h1,.info h2,.more h2,.contact-sec h2{font-size:clamp(42px,7vw,100px);line-height:.96}
+.info .big{font-family:Arial,Helvetica,sans-serif;font-size:clamp(20px,2.7vw,34px);font-weight:700;letter-spacing:-.045em}
+.facts2 li,.facts>div{padding-block:15px}
+.btn{border-radius:0;font-weight:700}
+.btn:not(.ghost){background:#101413;color:#f3f5ef;border-color:#101413}
+.btn:hover{opacity:1;background:#c6ff5d;color:#101413;border-color:#101413}
+dialog{width:min(1240px,100%);background:#eeefe9;color:#101413}
+.dlg-bar{background:#101413;border-color:#333b36}
+.dlg-bar .close{color:#f3f5ef;text-decoration:none;font-weight:700}
+.dlg{padding:clamp(22px,5vw,70px)}
+.dlg-head h2{font-size:clamp(52px,9vw,120px);line-height:.9;letter-spacing:-.08em}
+.dlg-head .meta{color:#48604e;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.dlg .lede{font-size:clamp(19px,2.5vw,30px);line-height:1.4;max-width:790px}
+.gallery,.evg{gap:10px}
+.gallery figure,.evg figure{border-radius:0}
+.gallery img,.evg img{transition:transform .3s ease}
+.video{margin-top:24px}
+.vlist{margin-top:12px}
+.dlg h4{font-size:clamp(21px,3vw,36px);font-weight:800;letter-spacing:-.05em}
+@media(min-width:900px){.mosaic{grid-template-columns:repeat(12,minmax(0,1fr))}.mosaic>.tile{grid-column:span 4;aspect-ratio:4/5}.mosaic>.tile:nth-child(7n+1),.mosaic>.tile:nth-child(7n+4){grid-column:span 8;aspect-ratio:16/10}}
+@media(max-width:759px){.wrap{width:calc(100% - 36px)}.top .wrap{min-height:58px}.top nav{gap:12px}.intro{padding:78px 0 85px}.intro h1{font-size:clamp(50px,12vw,82px)}.mosaic{grid-template-columns:1fr;gap:8px}.mosaic>.tile{aspect-ratio:4/3}.cap{padding:18px}.wtitle{font-size:clamp(26px,7vw,42px)}dialog{height:100dvh;max-height:100dvh}.dlg{padding:24px 18px 56px}.dlg-head h2{font-size:clamp(48px,12vw,76px)}.gallery,.evg{grid-template-columns:1fr 1fr;gap:7px}.gallery.mosaic{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.top nav{gap:8px}.top nav a{font-size:12px}.top nav.lang a{min-width:34px}.intro h1{font-size:clamp(46px,11.5vw,64px)}}
+@media(prefers-reduced-motion:reduce){.tile img,.gallery img,.evg img{transition:none}}
