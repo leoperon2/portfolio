@@ -74,3 +74,16 @@ dialog{width:min(1240px,100%);background:#eeefe9;color:#101413}
 .dlg .vlist button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .dlg .vlist button:hover:not([aria-pressed="true"]){background:#c6ff5d;color:#101413;border-color:#101413}
 @media(max-width:640px){.top .themebtn{order:4;flex-basis:44px;align-self:center}.top .wrap{align-items:center}.top nav:not(.lang){min-width:0}}
+
+/* Softer charcoal hero and editorial overlap of the first project. */
+.top,.intro{background:#303633}
+.top{border-bottom-color:#505a52}
+.intro{position:relative;padding-bottom:clamp(115px,14vw,205px)}
+.intro .intro-name,.intro .intro-sig{color:#c6ff5d}
+.intro + .mosaic,.intro ~ .mosaic{position:relative;z-index:2;margin-top:clamp(-86px,-7vw,-46px)}
+.mosaic>.tile:first-child{position:relative;z-index:3;box-shadow:0 20px 45px rgba(16,20,19,.17)}
+@media(max-width:759px){
+ .intro{padding-bottom:clamp(105px,22vw,155px)}
+ .intro + .mosaic,.intro ~ .mosaic{margin-top:-68px}
+ .mosaic>.tile:first-child{box-shadow:0 12px 28px rgba(16,20,19,.18)}
+}
