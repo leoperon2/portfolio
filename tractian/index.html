@@ -43,6 +43,17 @@
  .case .shot{grid-column:auto;aspect-ratio:4/3}
  .case .shot:first-child{grid-column:1/-1}
 }
+.case-player{position:relative;aspect-ratio:16/9;background:#141817}
+.case-player .video-preview,.case-player iframe{display:block;width:100%;height:100%;border:0}
+.case-player .video-preview img{height:100%;object-fit:cover}
+.video-preview:focus-visible,.case-player iframe:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.adama-photos{max-width:1120px;margin:0 auto 36px;display:grid;gap:10px}
+.adama-photo-row{display:flex;gap:10px;align-items:flex-start}
+.adama-photo{flex:calc(var(--photo-ratio)) 1 0;min-width:0}
+.adama-photo img{display:block;width:100%;height:auto}
+@media(max-width:750px){
+ .adama-photos,.adama-photo-row{gap:6px}
+}
 </style></head><body>
 <nav><a href="../en/" aria-label="Portfolio home"><strong>LEOPOLDO PERON®</strong></a><div class="links"><a href="#work">WORK</a><a href="../en/">FULL PORTFOLIO</a><a href="mailto:leoperon@gmail.com">CONTACT</a></div></nav>
 <main><section class="hero"><div class="kicker">Art direction and brand design</div><h1>Selected work</h1><p>I develop visual identities and carry them through to campaigns, digital experiences and events. These three projects show how I work, from the first design decision to production.</p><div class="project-links"><a href="#brazilian-pet-foods">Brazilian Pet Foods</a><a href="#adama">ADAMA Global</a><a href="#hydro">Hydro</a></div></section>
@@ -78,8 +89,11 @@
       <a href="../en/#case-adama">View the full case ↗</a>
     </div>
   </div>
-  <figure class="visual"><img src="../img/adama/budapeste/aftermovie.jpg" width="1280" height="720" alt="Budapest sign beneath the Ferris wheel in the Now We Grow aftermovie" loading="lazy" decoding="async"><figcaption>Now We Grow · Budapest, 2026</figcaption></figure>
-<div class="case-gallery"><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-01.jpg" alt="Now We Grow Budapest event backdrop"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-04.jpg" alt="Now We Grow roll-up banners"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/making-01.jpg" alt="Now We Grow Budapest backstage photograph"></div></div><details class="more-work"><summary>Explore more ADAMA work</summary><div class="expanded"><div class="video-grid"><div><button type="button" class="video-preview" data-provider="vimeo" data-id="1204922088" data-hash="976c338d5c" aria-label="Play ADAMA Budapest — Aftermovie"><img loading="lazy" src="../img/adama/budapeste/aftermovie.jpg" alt="ADAMA Budapest — Aftermovie thumbnail"><span class="play-icon" aria-hidden="true">▶</span></button><p class="video-label">ADAMA Budapest — Aftermovie</p></div></div><p><strong>Now We Grow · Budapest, 2026.</strong> Event visual identity, graphic applications and on-site production. The work below belongs to this event.</p><h4 class="gallery-heading">Now We Grow — Graphic pieces</h4><div class="case-gallery"><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-02.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-03.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-05.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-08.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-09.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-11.jpg" alt="Now We Grow Budapest event graphic design"></div></div><h4 class="gallery-heading">Now We Grow — Behind the scenes</h4><div class="case-gallery"><div class="shot"><img loading="lazy" src="../img/adama/budapeste/making-03.jpg" alt="Now We Grow Budapest behind the scenes"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/making-02.jpg" alt="Now We Grow Budapest behind the scenes"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/making-04.jpg" alt="Now We Grow Budapest behind the scenes"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/making-05.jpg" alt="Now We Grow Budapest behind the scenes"></div></div><a class="media-link" href="../en/#case-adama">Explore the full ADAMA case ↗</a></div></details></article>
+  <figure class="visual"><div class="case-player"><button type="button" class="video-preview" data-id="1204922088" data-hash="976c338d5c" aria-label="Play the Now We Grow Budapest aftermovie"><img src="../img/adama/budapeste/aftermovie.jpg" width="1280" height="720" alt="Budapest sign beneath the Ferris wheel in the Now We Grow aftermovie" loading="lazy" decoding="async"><span class="play-icon" aria-hidden="true">▶</span></button></div><figcaption>Now We Grow · Budapest, 2026</figcaption></figure>
+<div class="case-gallery"><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-01.jpg" alt="Now We Grow Budapest event backdrop"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/design-04.jpg" alt="Now We Grow roll-up banners"></div><div class="shot"><img loading="lazy" src="../img/adama/budapeste/making-01.jpg" alt="Now We Grow Budapest backstage photograph"></div></div><details class="more-work"><summary>Explore more ADAMA work</summary><div class="expanded"><p><strong>Now We Grow · Budapest, 2026.</strong> Event visual identity, graphic applications and on-site production. The work below belongs to this event.</p><h4 class="gallery-heading">Now We Grow — Graphic pieces</h4><div class="adama-photos"><div class="adama-photo-row"><div class="adama-photo" style="--photo-ratio:1371/1200"><img width="1371" height="1200" loading="lazy" src="../img/adama/budapeste/design-02.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="adama-photo" style="--photo-ratio:654/938"><img width="654" height="938" loading="lazy" src="../img/adama/budapeste/design-03.jpg" alt="Now We Grow Budapest event graphic design"></div></div>
+<div class="adama-photo-row"><div class="adama-photo" style="--photo-ratio:1600/1600"><img width="1600" height="1600" loading="lazy" src="../img/adama/budapeste/design-05.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="adama-photo" style="--photo-ratio:1440/1080"><img width="1440" height="1080" loading="lazy" src="../img/adama/budapeste/design-08.jpg" alt="Now We Grow Budapest event graphic design"></div></div>
+<div class="adama-photo-row"><div class="adama-photo" style="--photo-ratio:1440/1080"><img width="1440" height="1080" loading="lazy" src="../img/adama/budapeste/design-09.jpg" alt="Now We Grow Budapest event graphic design"></div><div class="adama-photo" style="--photo-ratio:1600/1067"><img width="1600" height="1067" loading="lazy" src="../img/adama/budapeste/design-11.jpg" alt="Now We Grow Budapest event graphic design"></div></div></div><h4 class="gallery-heading">Now We Grow — Behind the scenes</h4><div class="adama-photos"><div class="adama-photo-row"><div class="adama-photo" style="--photo-ratio:1126/2000"><img width="1126" height="2000" loading="lazy" src="../img/adama/budapeste/making-03.jpg" alt="Now We Grow Budapest behind the scenes"></div><div class="adama-photo" style="--photo-ratio:1333/2000"><img width="1333" height="2000" loading="lazy" src="../img/adama/budapeste/making-02.jpg" alt="Now We Grow Budapest behind the scenes"></div></div>
+<div class="adama-photo-row"><div class="adama-photo" style="--photo-ratio:1600/1066"><img width="1600" height="1066" loading="lazy" src="../img/adama/budapeste/making-04.jpg" alt="Now We Grow Budapest behind the scenes"></div><div class="adama-photo" style="--photo-ratio:1126/2000"><img width="1126" height="2000" loading="lazy" src="../img/adama/budapeste/making-05.jpg" alt="Now We Grow Budapest behind the scenes"></div></div></div><a class="media-link" href="../en/#case-adama">Explore the full ADAMA case ↗</a></div></details></article>
 <article class="case" id="hydro">
   <div class="case-head">
     <div>
@@ -92,11 +106,26 @@
       <a href="../en/#case-hydro">View the full case ↗</a>
     </div>
   </div>
-  <figure class="visual"><img src="../img/hydro/capa.jpg" width="1600" height="900" alt="Fafá de Belém holds a piece of ore in a forest in Pará" loading="lazy" decoding="async"><figcaption>Mãe Natureza · Campaign film featuring Fafá de Belém</figcaption></figure>
+  <figure class="visual"><div class="case-player"><button type="button" class="video-preview" data-id="889882404" data-hash="b77f75dc16" aria-label="Play Hydro — Mãe Natureza"><img src="../img/hydro/capa.jpg" width="1600" height="900" alt="Fafá de Belém holds a piece of ore in a forest in Pará" loading="lazy" decoding="async"><span class="play-icon" aria-hidden="true">▶</span></button></div><figcaption>Mãe Natureza · Campaign film featuring Fafá de Belém</figcaption></figure>
   <div class="case-gallery">
     <div class="shot"><img src="../img/hydro/1.jpg" alt="Fafá de Belém opens her arms in the forest" loading="lazy" decoding="async"></div>
     <div class="shot"><img src="../img/hydro/2.jpg" alt="Fafá de Belém speaks beside the river" loading="lazy" decoding="async"></div>
     <div class="shot"><img src="../img/hydro/6.jpg" alt="Fafá de Belém smiles with her hands outstretched" loading="lazy" decoding="async"></div>
   </div>
 </article>
-</section><section class="about"><h2>More work</h2><div class="actions"><a href="../en/">Explore my full portfolio ↗</a><a href="mailto:leoperon@gmail.com">Get in touch ↗</a></div></section></main><footer><strong>LEOPOLDO PERON</strong><a href="../en/">BACK TO HOME ↗</a><span>Selected work / 2026</span></footer><script>document.addEventListener('click',function(e){const b=e.target.closest('.video-preview');if(!b||b.dataset.playing)return;const provider=b.dataset.provider,id=b.dataset.id,hash=b.dataset.hash;const f=document.createElement('iframe');f.src=provider==='youtube'?'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&playsinline=1&rel=0':'https://player.vimeo.com/video/'+encodeURIComponent(id)+'?'+(hash?'h='+encodeURIComponent(hash)+'&':'')+'autoplay=1&dnt=1';f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;f.title=b.getAttribute('aria-label');b.replaceChildren(f);b.dataset.playing='true';b.setAttribute('aria-label','Playing '+id);});</script></body></html>
+</section><section class="about"><h2>More work</h2><div class="actions"><a href="../en/">Explore my full portfolio ↗</a><a href="mailto:leoperon@gmail.com">Get in touch ↗</a></div></section></main><footer><strong>LEOPOLDO PERON</strong><a href="../en/">BACK TO HOME ↗</a><span>Selected work / 2026</span></footer><script>
+document.addEventListener('click', function (event) {
+  const button = event.target.closest('.case-player .video-preview');
+  if (!button) return;
+
+  const video = new URL('https://player.vimeo.com/video/' + encodeURIComponent(button.dataset.id));
+  video.search = new URLSearchParams({h: button.dataset.hash, autoplay: '1', dnt: '1'});
+  const frame = document.createElement('iframe');
+  frame.src = video.href;
+  frame.title = button.getAttribute('aria-label');
+  frame.allow = 'autoplay; fullscreen; picture-in-picture';
+  frame.allowFullscreen = true;
+  button.replaceWith(frame);
+  frame.focus();
+});
+</script></body></html>
