@@ -503,6 +503,12 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 @media(max-width:700px){.intro{min-height:calc(100svh - 105px);padding:45px 0 55px}.intro>.wrap{gap:clamp(20px,2.8vh,30px);padding-inline:clamp(20px,5.5vw,34px)}.intro h1{font-size:clamp(3.6rem,14.1vw,6.2rem);letter-spacing:-.083em;line-height:.94}.intro-text{max-width:100%;font-size:clamp(1.28rem,5.15vw,1.65rem);line-height:1.43}.intro-sig{max-width:100%;font-size:clamp(1.5rem,5.5vw,2rem);line-height:1.24}}
 </style>
 <link rel="stylesheet" href="editorial-system.css?v=7">
+<style>
+.intro h1 .hero-direction > span{display:block}
+@media(min-width:860px){
+ .intro h1 .hero-direction > span{display:inline}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#trabalhos">Pular para os trabalhos</a>
@@ -524,7 +530,7 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 <section class="intro" aria-labelledby="intro-t">
   <div class="wrap">
     <p class="intro-name">Leopoldo Peron</p>
-    <h1 id="intro-t"><span class="hero-line">Direção</span><span class="hero-line">de arte,</span><span class="hero-line">marcas e</span><span class="hero-line">movimento.</span></h1>
+    <h1 id="intro-t"><span class="hero-line hero-direction"><span>Direção</span> <span>de arte,</span></span><span class="hero-line">marcas e</span><span class="hero-line">movimento.</span></h1>
     <p class="intro-text">Mais de 20 anos de trajetória criativa, desenvolvendo marcas, campanhas e experiências audiovisuais para clientes nacionais e internacionais.</p>
     <p class="intro-sig">Ideias que vendem. Marcas memoráveis.</p>
   </div>
