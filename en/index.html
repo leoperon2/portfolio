@@ -611,7 +611,7 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
    <h2 id="t-adama">ADAMA Global</h2>
    <p class="lede">Six global meetings, five countries and a visual experience of its own for each event.</p>
   </header>
-  <figure class="hero wide"><img src="../img/adama/capa-tela.jpg?v=2" width="1360" height="660" alt="The 360° room of the Field to Future event, in Milan, with the screen surrounding the audience" decoding="async"></figure>
+  <figure class="hero wide"><img src="../img/adama/budapeste/aftermovie.jpg" width="1280" height="720" alt="Now We Grow, Budapest 2026: aftermovie still" decoding="async"></figure>
   <div class='evtop'><p class='evtop-t'>6 events in 5 countries, from 2023 to 2026</p><nav class='evnav' aria-label='The 6 events'><button type="button" data-goto="ev-budapeste">Now We Grow<span>Budapest, 2026</span></button><button type="button" data-goto="ev-milao">Field to Future<span>Milan, 2026</span></button><button type="button" data-goto="ev-malta">Own The Moment<span>Malta, 2025</span></button><button type="button" data-goto="ev-chipre">Take The Field<span>Paphos, 2025</span></button><button type="button" data-goto="ev-barcelona">Further Together<span>Barcelona, 2024</span></button><button type="button" data-goto="ev-garda">The Road<span>Lago di Garda, 2023</span></button></nav></div>
   <dl class="facts brief"><div><dt>Context and challenge</dt><dd><p>Six global ADAMA leadership meetings, in five countries, each with its own theme, KV and objective. The challenge was to create the visual identity and the content of each event (graphic pieces, opening videos, vignettes and presentation templates) for very different screen formats, from multi-screen stages to 360° rooms, with production timelines of about four to five weeks per event, faithfully following ADAMA's brandbook.</p><p>Listen, learn, deliver: ADAMA's motto became ours too. We listen, understand what the client needs and deliver.</p></dd></div><div><dt>Main deliverables</dt><dd><p>Development of the visual concept for each event, graphic pieces, opening videos, bumpers, presentation templates and a complete visual kit.</p></dd></div><div><dt>Credits</dt><dd><p>Client: ADAMA Global. Concept and execution: Leopoldo Peron, London Creative. Agency: Aura Marketing.</p></dd></div></dl>
   <p class="evhint">Choose an event to see the concept, the videos and the pieces.</p>
@@ -813,6 +813,7 @@ var G=["data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsHCAoIBwsKCQoMD
   var x=document.getElementById('draft-x'); if(x) x.addEventListener('click',function(){ document.getElementById('draft').hidden=true; });
   function openCase(id){
     var d=document.getElementById('case-'+id); if(!d) return;
+    if(id==='adama') openEv(d.querySelector('#ev-budapeste'));
     if(!d.open) d.showModal();
     d.scrollTop=0;
     try{ history.replaceState(null,'','#case-'+id); }catch(e){}
