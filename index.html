@@ -504,9 +504,10 @@ h1,h2{ font-weight:200; letter-spacing:-.01em; line-height:.92; }
 </style>
 <link rel="stylesheet" href="editorial-system.css?v=7">
 <style>
-.intro h1 .hero-direction > span{display:block}
-@media(min-width:860px){
- .intro h1 .hero-direction > span{display:inline}
+/* Keep the Portuguese hero on three lines at every viewport width. */
+.intro h1 .hero-direction > span{display:inline}
+@media(max-width:859px){
+ .intro h1{font-size:clamp(2.6rem,12.4vw,6.2rem)}
 }
 </style>
 </head>
